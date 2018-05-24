@@ -1,0 +1,30 @@
+{
+  "name": "equality-explorer-two-variables",
+  "version": "1.0.0-dev.0",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/equality-explorer-two-variables.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.0"
+  },
+  "phet": {
+    "requirejsNamespace": "EQUALITY_EXPLORER_TWO_VARIABLES",
+    "preload": [
+      "../sherpa/lib/Tween-r12.js"
+    ],
+    "phetLibs": [
+      "equality-explorer",
+      "twixt",
+      "vegas",
+      "vibe"
+    ],
+    "runnable": true,
+    "simulation": true,
+    "supportedBrands": [
+      "phet",
+      "adapted-from-phet"
+    ]
+  }
+}
