@@ -1,0 +1,99 @@
+{
+  "comment": "# equality-explorer-two-variables 1.0.0-dev.1 Thu May 24 2018 14:40:02 GMT-0600 (MDT)",
+  "assert": {
+    "sha": "928741cfc8fe804334d5b35292140314511f8678",
+    "branch": "master"
+  },
+  "axon": {
+    "sha": "482ed7cddbbb1a8d46342b664870f5e74aedddc4",
+    "branch": "master"
+  },
+  "brand": {
+    "sha": "89d28f6309a83eb51b6c1fc0130e76ad7935f09e",
+    "branch": "master"
+  },
+  "chipper": {
+    "sha": "5ada34e8206025a5fe6e1994a17c082b042082db",
+    "branch": "master"
+  },
+  "dot": {
+    "sha": "3ec9bb6ecccf4e6a974eeb12adfb534135c94288",
+    "branch": "master"
+  },
+  "equality-explorer": {
+    "sha": "13119a1330bf2a11f95ac322187dff6daaafbc56",
+    "branch": "master"
+  },
+  "equality-explorer-two-variables": {
+    "sha": "0ed5745838616b71d30215bbf527cda84783839e",
+    "branch": "master"
+  },
+  "joist": {
+    "sha": "6f0a8f0be8c658df67968158003cff14db1863a9",
+    "branch": "master"
+  },
+  "kite": {
+    "sha": "e59ed19070ca29ecf832b44793f94ae566f9568f",
+    "branch": "master"
+  },
+  "phet-core": {
+    "sha": "84394901bf224c0ca49775e27d45772e95df90c8",
+    "branch": "master"
+  },
+  "phet-io": {
+    "sha": "55abcb639fc923162fd5cd4dec46b3a35d327d31",
+    "branch": "master"
+  },
+  "phet-io-wrapper-classroom-activity": {
+    "sha": "5204ea8e3d83eabff4d8b877f49171a90d704585",
+    "branch": "master"
+  },
+  "phet-io-wrapper-lab-book": {
+    "sha": "ccaaaa4b4b36fb8ae30d033262443965077649f2",
+    "branch": "master"
+  },
+  "phet-io-wrappers": {
+    "sha": "8eae3a2d98f4866672bf0fc63739539ddfe8d58b",
+    "branch": "master"
+  },
+  "phetcommon": {
+    "sha": "ddb76c0cc894fc9ef328bab0e00a0ac969eebf5c",
+    "branch": "master"
+  },
+  "query-string-machine": {
+    "sha": "1f2322e4cab5658d4134715f00e12e5a741b2b9f",
+    "branch": "master"
+  },
+  "scenery": {
+    "sha": "766eae1c62c1f47d8f61ff2b711497aa6898b671",
+    "branch": "master"
+  },
+  "scenery-phet": {
+    "sha": "3a80a3e85c78f34cca8de332ba96780b5f9bf55b",
+    "branch": "master"
+  },
+  "sherpa": {
+    "sha": "ded365aa2df5026200b20b13b9a9027d5a25215e",
+    "branch": "master"
+  },
+  "sun": {
+    "sha": "32884d9c6cf5aae95417cb4a046b73af265a6cf9",
+    "branch": "master"
+  },
+  "tandem": {
+    "sha": "ca0438518a12c697412efddcc33c02531e7a0a7d",
+    "branch": "master"
+  },
+  "twixt": {
+    "sha": "bd596b346c7fc9e0c5c58ac142234256e7312198",
+    "branch": "master"
+  },
+  "vegas": {
+    "sha": "465e0baf4d09a1b3b4379bb954479bcd2faaf58e",
+    "branch": "master"
+  },
+  "vibe": {
+    "sha": "93a60345304e9733edbd248a02accc3252f98ed6",
+    "branch": "master"
+  }
+}
