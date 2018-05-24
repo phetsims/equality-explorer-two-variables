@@ -9,27 +9,18 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var EqualityExplorerConstants = require( 'EQUALITY_EXPLORER/common/EqualityExplorerConstants' );
   var Sim = require( 'JOIST/Sim' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
-  var EqualityExplorerTwoVariablesScreen = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equality-explorer-two-variables/EqualityExplorerTwoVariablesScreen' );
+  var TwoVariablesScreen = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/twovariables/TwoVariablesScreen' );
 
   // strings
   var equalityExplorerTwoVariablesTitleString = require( 'string!EQUALITY_EXPLORER_TWO_VARIABLES/equality-explorer-two-variables.title' );
 
-  var simOptions = {
-    credits: {
-      //TODO fill in proper credits, all of these fields are optional, see joist.AboutDialog
-      leadDesign: '',
-      softwareDevelopment: '',
-      team: '',
-      qualityAssurance: '',
-      graphicArts: '',
-      thanks: ''
-    }
-  };
-
   SimLauncher.launch( function() {
-    var sim = new Sim( equalityExplorerTwoVariablesTitleString, [ new EqualityExplorerTwoVariablesScreen() ], simOptions );
+    var sim = new Sim( equalityExplorerTwoVariablesTitleString, [ new TwoVariablesScreen() ], {
+      credits: EqualityExplorerConstants.CREDITS
+    } );
     sim.start();
   } );
 } );
