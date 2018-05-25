@@ -9,8 +9,8 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var equalityExplorer = require( 'EQUALITY_EXPLORER/equalityExplorer' );
   var EqualityExplorerModel = require( 'EQUALITY_EXPLORER/common/model/EqualityExplorerModel' );
+  var equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
   var inherit = require( 'PHET_CORE/inherit' );
   var TwoVariablesScene = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/twovariables/model/TwoVariablesScene' );
 
@@ -21,7 +21,7 @@ define( function( require ) {
     EqualityExplorerModel.call( this, [ new TwoVariablesScene() ] );
   }
 
-  equalityExplorer.register( 'TwoVariablesModel', TwoVariablesModel );
+  equalityExplorerTwoVariables.register( 'TwoVariablesModel', TwoVariablesModel );
 
   return inherit( EqualityExplorerModel, TwoVariablesModel );
 } );

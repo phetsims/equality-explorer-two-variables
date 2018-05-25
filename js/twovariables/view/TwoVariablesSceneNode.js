@@ -10,7 +10,7 @@ define( function( require ) {
 
   // modules
   var Dimension2 = require( 'DOT/Dimension2' );
-  var equalityExplorer = require( 'EQUALITY_EXPLORER/equalityExplorer' );
+  var equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
   var inherit = require( 'PHET_CORE/inherit' );
   var VariablesSceneNode = require( 'EQUALITY_EXPLORER/variables/view/VariablesSceneNode' );
 
@@ -33,7 +33,7 @@ define( function( require ) {
     VariablesSceneNode.call( this, scene, sceneProperty, layoutBounds, options );
   }
 
-  equalityExplorer.register( 'TwoVariablesSceneNode', TwoVariablesSceneNode );
+  equalityExplorerTwoVariables.register( 'TwoVariablesSceneNode', TwoVariablesSceneNode );
 
   return inherit( VariablesSceneNode, TwoVariablesSceneNode );
 } );

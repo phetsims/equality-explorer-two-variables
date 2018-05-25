@@ -10,8 +10,8 @@ define( function( require ) {
 
   // modules
   var ConstantTermCreator = require( 'EQUALITY_EXPLORER/common/model/ConstantTermCreator' );
-  var equalityExplorer = require( 'EQUALITY_EXPLORER/equalityExplorer' );
   var EqualityExplorerColors = require( 'EQUALITY_EXPLORER/common/EqualityExplorerColors' );
+  var equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Scene = require( 'EQUALITY_EXPLORER/common/model/Scene' );
   var Snapshot = require( 'EQUALITY_EXPLORER/common/model/Snapshot' );
@@ -40,7 +40,7 @@ define( function( require ) {
       } );
   }
 
-  equalityExplorer.register( 'TwoVariablesScene', TwoVariablesScene );
+  equalityExplorerTwoVariables.register( 'TwoVariablesScene', TwoVariablesScene );
 
   /**
    * Creates the term creators for this scene.
