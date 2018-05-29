@@ -14,7 +14,6 @@ define( function( require ) {
   var equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Scene = require( 'EQUALITY_EXPLORER/common/model/Scene' );
-  var Snapshot = require( 'EQUALITY_EXPLORER/common/model/Snapshot' );
   var Variable = require( 'EQUALITY_EXPLORER/common/model/Variable' );
   var VariableTermCreator = require( 'EQUALITY_EXPLORER/common/model/VariableTermCreator' );
 
@@ -27,15 +26,14 @@ define( function( require ) {
    */
   function TwoVariablesScene() {
 
-    // @public (read-only)
-    this.xVariable = new Variable( xString );
-    this.yVariable = new Variable( yString );
+    var xVariable = new Variable( xString );
+    var yVariable = new Variable( yString );
 
     Scene.call( this,
-      createTermCreators( this.xVariable, this.yVariable ),
-      createTermCreators( this.xVariable, this.yVariable ), {
+      createTermCreators( xVariable, yVariable ),
+      createTermCreators( xVariable, yVariable ), {
         debugName: 'xy',
-        variables: [ this.xVariable, this.yVariable ],
+        variables: [ xVariable, yVariable ],
         numberOfSnapshots: 4
       } );
   }
@@ -65,28 +63,5 @@ define( function( require ) {
     ];
   }
 
-  return inherit( Scene, TwoVariablesScene, {
-
-    /**
-     * @public
-     * @override
-     */
-    reset: function() {
-      this.xVariable.reset();
-      this.yVariable.reset();
-      Scene.prototype.reset.call( this );
-    },
-
-    /**
-     * Creates a snapshot of the scene.
-     * @returns {Snapshot}
-     * @public
-     * @override
-     */
-    createSnapshot: function() {
-      return new Snapshot( this, {
-        variables: [ this.xVariable, this.yVariable ]
-      } );
-    }
-  } );
+  return inherit( Scene, TwoVariablesScene );
 } );
