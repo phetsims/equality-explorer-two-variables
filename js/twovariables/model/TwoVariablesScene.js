@@ -1,5 +1,6 @@
 // Copyright 2018, University of Colorado Boulder
 
+//TODO VariablesScene and TwoVariablesScene should be related, like VariablesSceneNode and TwoVariablesSceneNode
 /**
  * The sole scene in the 'Two Variables' screen.
  *
