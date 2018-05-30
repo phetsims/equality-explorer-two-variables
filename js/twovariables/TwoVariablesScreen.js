@@ -25,7 +25,7 @@ define( function( require ) {
     options = _.extend( {
 
       // EqualityExplorerScreen options
-      backgroundColorProperty: new Property( 'rgb( 214, 233, 254 )' )
+      backgroundColorProperty: new Property( 'rgb( 214, 233, 254 )' ) //TODO should this be the same color as Variables screen?
     }, options );
 
     EqualityExplorerScreen.call( this,
