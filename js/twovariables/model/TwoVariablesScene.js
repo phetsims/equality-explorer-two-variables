@@ -32,7 +32,7 @@ define( function( require ) {
     EqualityExplorerScene.call( this,
       createTermCreators( xVariable, yVariable ),
       createTermCreators( xVariable, yVariable ), {
-        debugName: 'xy',
+        debugName: 'twoVariables',
         variables: [ xVariable, yVariable ],
         numberOfSnapshots: 4
       } );
