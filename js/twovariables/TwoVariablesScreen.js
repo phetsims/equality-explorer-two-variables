@@ -23,6 +23,8 @@ define( function( require ) {
   function TwoVariablesScreen( options ) {
 
     options = _.extend( {
+
+      // EqualityExplorerScreen options
       backgroundColorProperty: new Property( 'rgb( 214, 233, 254 )' )
     }, options );
 

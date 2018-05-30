@@ -24,6 +24,8 @@ define( function( require ) {
   function TwoVariablesSceneNode( scene, sceneProperty, layoutBounds, options ) {
 
     options = _.extend( {
+
+      // VariablesSceneNode options
       termsToolboxContentSize: new Dimension2( 270, 50 ),
       termsToolboxSpacing: 12, // horizontal spacing between terms in the toolbox
       snapshotControlOptions: {
