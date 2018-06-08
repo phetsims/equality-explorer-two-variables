@@ -17,11 +17,12 @@ define( function( require ) {
   /**
    * @param {TwoVariablesScene} scene
    * @param {Property.<Scene>} sceneProperty - the selected scene
+   * @param {BooleanProperty} snapshotsAccordionBoxExpandedProperty
    * @param {Bounds2} layoutBounds
    * @param {Object} [options]
    * @constructor
    */
-  function TwoVariablesSceneNode( scene, sceneProperty, layoutBounds, options ) {
+  function TwoVariablesSceneNode( scene, sceneProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
 
     options = _.extend( {
 
@@ -34,7 +35,7 @@ define( function( require ) {
       }
     }, options );
 
-    VariablesSceneNode.call( this, scene, sceneProperty, layoutBounds, options );
+    VariablesSceneNode.call( this, scene, sceneProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
   }
 
   equalityExplorerTwoVariables.register( 'TwoVariablesSceneNode', TwoVariablesSceneNode );
