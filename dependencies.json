@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-two-variables 1.0.4-rc.1 Wed Mar 20 2019 18:52:09 GMT-0400 (EDT)",
+  "comment": "# equality-explorer-two-variables 1.0.4-rc.1 Thu Mar 28 2019 13:57:58 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "HEAD"
@@ -13,8 +13,8 @@
     "branch": "HEAD"
   },
   "chipper": {
-    "sha": "7e804413b761b323290c35aec328e64de56aea54",
-    "branch": "HEAD"
+    "sha": "18939738194feb717d8702615fa0560ae27515cd",
+    "branch": "equality-explorer-two-variables-1.0"
   },
   "dot": {
     "sha": "383e4b027cf7c42388d3b19990537c1c0c7c20e3",
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-two-variables": {
-    "sha": "530046bd967e9bd27832b4ad31af28d7a9245bc4",
+    "sha": "ff775c9df15a46e5cd76d15f51db016210d50cf8",
     "branch": "1.0"
   },
   "joist": {
