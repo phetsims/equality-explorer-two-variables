@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-two-variables 1.0.5 Wed Apr 24 2019 15:27:48 GMT-0800 (Alaskan Daylight Time)",
+  "comment": "# equality-explorer-two-variables 1.0.5 Fri May 24 2019 14:41:17 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "HEAD"
@@ -13,8 +13,8 @@
     "branch": "HEAD"
   },
   "chipper": {
-    "sha": "62b56435e683d04738f7a45f88fbca382e832953",
-    "branch": "HEAD"
+    "sha": "b2b30da1621a8fc7b02c69317e616c517e1b07fe",
+    "branch": "equality-explorer-two-variables-1.0"
   },
   "dot": {
     "sha": "383e4b027cf7c42388d3b19990537c1c0c7c20e3",
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-two-variables": {
-    "sha": "de9b0e62d67615d1242431ac7c82e045de9063b6",
+    "sha": "4d7c8df60f411c7e8dc7ea4c4122ad309bac0ed2",
     "branch": "1.0"
   },
   "joist": {
@@ -42,18 +42,6 @@
   },
   "phet-io": {
     "sha": "2a3c3457e07deb737eefdb33fbd659f8f7bb6fc9",
-    "branch": "HEAD"
-  },
-  "phet-io-wrapper-classroom-activity": {
-    "sha": "c1caa58b5b827c5deb7fe8fae8eea4d68b3596f8",
-    "branch": "HEAD"
-  },
-  "phet-io-wrapper-hookes-law-energy": {
-    "sha": "b316cfcf07051a8f9b2bb0b99e85d51be049c980",
-    "branch": "HEAD"
-  },
-  "phet-io-wrapper-lab-book": {
-    "sha": "fe5cd3b9528ede6091b3cefccd65a8293efe7e6d",
     "branch": "HEAD"
   },
   "phet-io-wrappers": {
