@@ -5,17 +5,17 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var EqualityExplorerConstants = require( 'EQUALITY_EXPLORER/common/EqualityExplorerConstants' );
-  var Sim = require( 'JOIST/Sim' );
-  var SimLauncher = require( 'JOIST/SimLauncher' );
-  var TwoVariablesScreen = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/twovariables/TwoVariablesScreen' );
+  const EqualityExplorerConstants = require( 'EQUALITY_EXPLORER/common/EqualityExplorerConstants' );
+  const Sim = require( 'JOIST/Sim' );
+  const SimLauncher = require( 'JOIST/SimLauncher' );
+  const TwoVariablesScreen = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/twovariables/TwoVariablesScreen' );
 
   // strings
-  var equalityExplorerTwoVariablesTitleString = require( 'string!EQUALITY_EXPLORER_TWO_VARIABLES/equality-explorer-two-variables.title' );
+  const equalityExplorerTwoVariablesTitleString = require( 'string!EQUALITY_EXPLORER_TWO_VARIABLES/equality-explorer-two-variables.title' );
 
   SimLauncher.launch( function() {
     var sim = new Sim( equalityExplorerTwoVariablesTitleString, [ new TwoVariablesScreen() ], {

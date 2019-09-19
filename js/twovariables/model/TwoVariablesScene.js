@@ -5,21 +5,21 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var ConstantTermCreator = require( 'EQUALITY_EXPLORER/common/model/ConstantTermCreator' );
-  var EqualityExplorerColors = require( 'EQUALITY_EXPLORER/common/EqualityExplorerColors' );
-  var EqualityExplorerScene = require( 'EQUALITY_EXPLORER/common/model/EqualityExplorerScene' );
-  var equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var Variable = require( 'EQUALITY_EXPLORER/common/model/Variable' );
-  var VariableTermCreator = require( 'EQUALITY_EXPLORER/common/model/VariableTermCreator' );
+  const ConstantTermCreator = require( 'EQUALITY_EXPLORER/common/model/ConstantTermCreator' );
+  const EqualityExplorerColors = require( 'EQUALITY_EXPLORER/common/EqualityExplorerColors' );
+  const EqualityExplorerScene = require( 'EQUALITY_EXPLORER/common/model/EqualityExplorerScene' );
+  const equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const Variable = require( 'EQUALITY_EXPLORER/common/model/Variable' );
+  const VariableTermCreator = require( 'EQUALITY_EXPLORER/common/model/VariableTermCreator' );
 
   // string
-  var xString = require( 'string!EQUALITY_EXPLORER/x' );
-  var yString = require( 'string!EQUALITY_EXPLORER_TWO_VARIABLES/y' );
+  const xString = require( 'string!EQUALITY_EXPLORER/x' );
+  const yString = require( 'string!EQUALITY_EXPLORER_TWO_VARIABLES/y' );
 
   /**
    * @constructor
