@@ -26,8 +26,8 @@ define( require => {
    */
   function TwoVariablesScene() {
 
-    var xVariable = new Variable( xString );
-    var yVariable = new Variable( yString );
+    const xVariable = new Variable( xString );
+    const yVariable = new Variable( yString );
 
     EqualityExplorerScene.call( this,
       createTermCreators( xVariable, yVariable ),

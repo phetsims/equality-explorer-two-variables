@@ -18,7 +18,7 @@ define( require => {
   const equalityExplorerTwoVariablesTitleString = require( 'string!EQUALITY_EXPLORER_TWO_VARIABLES/equality-explorer-two-variables.title' );
 
   SimLauncher.launch( function() {
-    var sim = new Sim( equalityExplorerTwoVariablesTitleString, [ new TwoVariablesScreen() ], {
+    const sim = new Sim( equalityExplorerTwoVariablesTitleString, [ new TwoVariablesScreen() ], {
       credits: EqualityExplorerConstants.CREDITS
     } );
     sim.start();
