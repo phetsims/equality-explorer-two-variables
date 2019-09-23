@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-two-variables 1.0.10 Thu Sep 19 2019 01:32:37 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# equality-explorer-two-variables 1.0.10 Mon Sep 23 2019 15:23:18 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "HEAD"
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-two-variables": {
-    "sha": "9fa686e162977f8aab8264ac2aa630f358f6abf5",
+    "sha": "0ed30002f7929ae9657a7a4efd0f679f73d912c1",
     "branch": "1.0"
   },
   "joist": {
@@ -61,8 +61,8 @@
     "branch": "HEAD"
   },
   "scenery": {
-    "sha": "21e94a525c06a5fbb5560ca73bc700bb80d1c045",
-    "branch": "HEAD"
+    "sha": "3f08595cc79eb9e833b1fe55f679c4703c42b9f3",
+    "branch": "equality-explorer-two-variables-1.0"
   },
   "scenery-phet": {
     "sha": "38f2f97ba79297160b2cccedee2be6bc48732c28",
