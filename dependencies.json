@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-two-variables 1.0.11 Thu Oct 03 2019 11:20:34 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# equality-explorer-two-variables 1.0.11 Mon Oct 14 2019 13:48:33 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "HEAD"
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-two-variables": {
-    "sha": "c4aaf4468b93e1331a6c058ee5f939c291232cec",
+    "sha": "453473609dcf601b7e1a46d2a08468c9b67bafa1",
     "branch": "1.0"
   },
   "joist": {
@@ -37,8 +37,8 @@
     "branch": "HEAD"
   },
   "phet-core": {
-    "sha": "e9adfb5b44a2d18b3ffb463db196a8ec58aabb3b",
-    "branch": "HEAD"
+    "sha": "854650f047a02bce8b4f52b489855f312ca8cf8d",
+    "branch": "equality-explorer-two-variables-1.0"
   },
   "phet-io": {
     "sha": "2a3c3457e07deb737eefdb33fbd659f8f7bb6fc9",
@@ -89,7 +89,7 @@
     "branch": "HEAD"
   },
   "vibe": {
-    "sha": "1c92302b6049577c83c932da042b7040590445c6",
-    "branch": "HEAD"
+    "sha": "1e539d205cc1a044dbb803c3fb2f999b3a305433",
+    "branch": "equality-explorer-two-variables-1.0"
   }
 }
