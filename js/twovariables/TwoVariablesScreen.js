@@ -12,6 +12,7 @@ define( require => {
   const EqualityExplorerScreen = require( 'EQUALITY_EXPLORER/common/EqualityExplorerScreen' );
   const equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
   const inherit = require( 'PHET_CORE/inherit' );
+  const merge = require( 'PHET_CORE/merge' );
   const Property = require( 'AXON/Property' );
   const TwoVariablesModel = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/twovariables/model/TwoVariablesModel' );
   const TwoVariablesScreenView = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/twovariables/view/TwoVariablesScreenView' );
@@ -22,7 +23,7 @@ define( require => {
    */
   function TwoVariablesScreen( options ) {
 
-    options = _.extend( {
+    options = merge( {
 
       // EqualityExplorerScreen options
       backgroundColorProperty: new Property( 'rgb( 214, 233, 254 )' )

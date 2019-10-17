@@ -12,6 +12,7 @@ define( require => {
   const Dimension2 = require( 'DOT/Dimension2' );
   const equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
   const inherit = require( 'PHET_CORE/inherit' );
+  const merge = require( 'PHET_CORE/merge' );
   const VariablesSceneNode = require( 'EQUALITY_EXPLORER/variables/view/VariablesSceneNode' );
 
   /**
@@ -26,7 +27,7 @@ define( require => {
   function TwoVariablesSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
                                   snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
 
-    options = _.extend( {
+    options = merge( {
 
       // VariablesSceneNode options
       termsToolboxContentSize: new Dimension2( 270, 50 ),
