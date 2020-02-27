@@ -5,67 +5,66 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const ConstantTermCreator = require( 'EQUALITY_EXPLORER/common/model/ConstantTermCreator' );
-  const EqualityExplorerColors = require( 'EQUALITY_EXPLORER/common/EqualityExplorerColors' );
-  const EqualityExplorerConstants = require( 'EQUALITY_EXPLORER/common/EqualityExplorerConstants' );
-  const EqualityExplorerScene = require( 'EQUALITY_EXPLORER/common/model/EqualityExplorerScene' );
-  const equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
-  const inherit = require( 'PHET_CORE/inherit' );
-  const Variable = require( 'EQUALITY_EXPLORER/common/model/Variable' );
-  const VariableTermCreator = require( 'EQUALITY_EXPLORER/common/model/VariableTermCreator' );
+import EqualityExplorerColors from '../../../../equality-explorer/js/common/EqualityExplorerColors.js';
+import EqualityExplorerConstants from '../../../../equality-explorer/js/common/EqualityExplorerConstants.js';
+import ConstantTermCreator from '../../../../equality-explorer/js/common/model/ConstantTermCreator.js';
+import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
+import Variable from '../../../../equality-explorer/js/common/model/Variable.js';
+import VariableTermCreator from '../../../../equality-explorer/js/common/model/VariableTermCreator.js';
+import equalityExplorerStrings from '../../../../equality-explorer/js/equality-explorer-strings.js';
+import inherit from '../../../../phet-core/js/inherit.js';
+import equalityExplorerTwoVariablesStrings from '../../equality-explorer-two-variables-strings.js';
+import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 
-  // string
-  const xString = require( 'string!EQUALITY_EXPLORER/x' );
-  const yString = require( 'string!EQUALITY_EXPLORER_TWO_VARIABLES/y' );
+// string
+const xString = equalityExplorerStrings.x;
+const yString = equalityExplorerTwoVariablesStrings.y;
 
-  /**
-   * @constructor
-   */
-  function TwoVariablesScene() {
+/**
+ * @constructor
+ */
+function TwoVariablesScene() {
 
-    const variableOptions = {
-      range: EqualityExplorerConstants.VARIABLE_RANGE
-    };
-    const xVariable = new Variable( xString, variableOptions );
-    const yVariable = new Variable( yString, variableOptions );
+  const variableOptions = {
+    range: EqualityExplorerConstants.VARIABLE_RANGE
+  };
+  const xVariable = new Variable( xString, variableOptions );
+  const yVariable = new Variable( yString, variableOptions );
 
-    EqualityExplorerScene.call( this,
-      createTermCreators( xVariable, yVariable ),
-      createTermCreators( xVariable, yVariable ), {
-        debugName: 'twoVariables',
-        variables: [ xVariable, yVariable ],
-        numberOfSnapshots: 4
-      } );
-  }
+  EqualityExplorerScene.call( this,
+    createTermCreators( xVariable, yVariable ),
+    createTermCreators( xVariable, yVariable ), {
+      debugName: 'twoVariables',
+      variables: [ xVariable, yVariable ],
+      numberOfSnapshots: 4
+    } );
+}
 
-  equalityExplorerTwoVariables.register( 'TwoVariablesScene', TwoVariablesScene );
+equalityExplorerTwoVariables.register( 'TwoVariablesScene', TwoVariablesScene );
 
-  /**
-   * Creates the term creators for this scene.
-   * @param {Variable} xVariable
-   * @param {Variable} yVariable
-   * @returns {TermCreator[]}
-   */
-  function createTermCreators( xVariable, yVariable ) {
+/**
+ * Creates the term creators for this scene.
+ * @param {Variable} xVariable
+ * @param {Variable} yVariable
+ * @returns {TermCreator[]}
+ */
+function createTermCreators( xVariable, yVariable ) {
 
-    return [
+  return [
 
-      // x & -x
-      new VariableTermCreator( xVariable ),
+    // x & -x
+    new VariableTermCreator( xVariable ),
 
-      // y & -y
-      new VariableTermCreator( yVariable, {
-        positiveFill: EqualityExplorerColors.POSITIVE_Y_FILL,
-        negativeFill: EqualityExplorerColors.NEGATIVE_Y_FILL
-      } ),
+    // y & -y
+    new VariableTermCreator( yVariable, {
+      positiveFill: EqualityExplorerColors.POSITIVE_Y_FILL,
+      negativeFill: EqualityExplorerColors.NEGATIVE_Y_FILL
+    } ),
 
-      new ConstantTermCreator()
-    ];
-  }
+    new ConstantTermCreator()
+  ];
+}
 
-  return inherit( EqualityExplorerScene, TwoVariablesScene );
-} );
+inherit( EqualityExplorerScene, TwoVariablesScene );
+export default TwoVariablesScene;

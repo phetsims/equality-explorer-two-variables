@@ -5,23 +5,20 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const EqualityExplorerModel = require( 'EQUALITY_EXPLORER/common/model/EqualityExplorerModel' );
-  const equalityExplorerTwoVariables = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/equalityExplorerTwoVariables' );
-  const inherit = require( 'PHET_CORE/inherit' );
-  const TwoVariablesScene = require( 'EQUALITY_EXPLORER_TWO_VARIABLES/twovariables/model/TwoVariablesScene' );
+import EqualityExplorerModel from '../../../../equality-explorer/js/common/model/EqualityExplorerModel.js';
+import inherit from '../../../../phet-core/js/inherit.js';
+import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
+import TwoVariablesScene from './TwoVariablesScene.js';
 
-  /**
-   * @constructor
-   */
-  function TwoVariablesModel() {
-    EqualityExplorerModel.call( this, [ new TwoVariablesScene() ] );
-  }
+/**
+ * @constructor
+ */
+function TwoVariablesModel() {
+  EqualityExplorerModel.call( this, [ new TwoVariablesScene() ] );
+}
 
-  equalityExplorerTwoVariables.register( 'TwoVariablesModel', TwoVariablesModel );
+equalityExplorerTwoVariables.register( 'TwoVariablesModel', TwoVariablesModel );
 
-  return inherit( EqualityExplorerModel, TwoVariablesModel );
-} );
+inherit( EqualityExplorerModel, TwoVariablesModel );
+export default TwoVariablesModel;
