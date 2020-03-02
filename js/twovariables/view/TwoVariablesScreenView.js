@@ -7,21 +7,17 @@
  */
 
 import EqualityExplorerScreenView from '../../../../equality-explorer/js/common/view/EqualityExplorerScreenView.js';
-import inherit from '../../../../phet-core/js/inherit.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import TwoVariablesSceneNode from './TwoVariablesSceneNode.js';
 
-/**
- * @param {TwoVariablesModel} model
- * @constructor
- */
-function TwoVariablesScreenView( model ) {
-  EqualityExplorerScreenView.call( this, model );
-}
+class TwoVariablesScreenView extends EqualityExplorerScreenView {
 
-equalityExplorerTwoVariables.register( 'TwoVariablesScreenView', TwoVariablesScreenView );
-
-export default inherit( EqualityExplorerScreenView, TwoVariablesScreenView, {
+  /**
+   * @param {TwoVariablesModel} model
+   */
+  constructor( model ) {
+    super( model );
+  }
 
   /**
    * Creates the Node for this scene.
@@ -35,9 +31,13 @@ export default inherit( EqualityExplorerScreenView, TwoVariablesScreenView, {
    * @protected
    * @override
    */
-  createSceneNode: function( scene, sceneProperty, equationAccordionBoxExpandedProperty,
-                             snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
+  createSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
+                   snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
     return new TwoVariablesSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
       snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
   }
-} );
+}
+
+equalityExplorerTwoVariables.register( 'TwoVariablesScreenView', TwoVariablesScreenView );
+
+export default TwoVariablesScreenView;

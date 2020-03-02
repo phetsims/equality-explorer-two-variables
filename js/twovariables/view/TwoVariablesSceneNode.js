@@ -8,38 +8,38 @@
 
 import Dimension2 from '../../../../dot/js/Dimension2.js';
 import VariablesSceneNode from '../../../../equality-explorer/js/variables/view/VariablesSceneNode.js';
-import inherit from '../../../../phet-core/js/inherit.js';
 import merge from '../../../../phet-core/js/merge.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 
-/**
- * @param {TwoVariablesScene} scene
- * @param {Property.<Scene>} sceneProperty - the selected scene
- * @param {BooleanProperty} equationAccordionBoxExpandedProperty
- * @param {BooleanProperty} snapshotsAccordionBoxExpandedProperty
- * @param {Bounds2} layoutBounds
- * @param {Object} [options]
- * @constructor
- */
-function TwoVariablesSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
-                                snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
+class TwoVariablesSceneNode extends VariablesSceneNode {
 
-  options = merge( {
+  /**
+   * @param {TwoVariablesScene} scene
+   * @param {Property.<Scene>} sceneProperty - the selected scene
+   * @param {BooleanProperty} equationAccordionBoxExpandedProperty
+   * @param {BooleanProperty} snapshotsAccordionBoxExpandedProperty
+   * @param {Bounds2} layoutBounds
+   * @param {Object} [options]
+   */
+  constructor( scene, sceneProperty, equationAccordionBoxExpandedProperty,
+               snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
 
-    // VariablesSceneNode options
-    termsToolboxContentSize: new Dimension2( 270, 50 ),
-    termsToolboxSpacing: 12, // horizontal spacing between terms in the toolbox
-    snapshotControlOptions: {
-      orientation: 'vertical', // put variable values below equations in Snapshots
-      controlHeight: 70 // height of each snapshot, a bit taller than default since values are below equations
-    }
-  }, options );
+    options = merge( {
 
-  VariablesSceneNode.call( this, scene, sceneProperty, equationAccordionBoxExpandedProperty,
-    snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
+      // VariablesSceneNode options
+      termsToolboxContentSize: new Dimension2( 270, 50 ),
+      termsToolboxSpacing: 12, // horizontal spacing between terms in the toolbox
+      snapshotControlOptions: {
+        orientation: 'vertical', // put variable values below equations in Snapshots
+        controlHeight: 70 // height of each snapshot, a bit taller than default since values are below equations
+      }
+    }, options );
+
+    super( scene, sceneProperty, equationAccordionBoxExpandedProperty,
+      snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
+  }
 }
 
 equalityExplorerTwoVariables.register( 'TwoVariablesSceneNode', TwoVariablesSceneNode );
 
-inherit( VariablesSceneNode, TwoVariablesSceneNode );
 export default TwoVariablesSceneNode;

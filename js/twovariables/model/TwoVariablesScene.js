@@ -13,35 +13,32 @@ import EqualityExplorerScene from '../../../../equality-explorer/js/common/model
 import Variable from '../../../../equality-explorer/js/common/model/Variable.js';
 import VariableTermCreator from '../../../../equality-explorer/js/common/model/VariableTermCreator.js';
 import equalityExplorerStrings from '../../../../equality-explorer/js/equality-explorer-strings.js';
-import inherit from '../../../../phet-core/js/inherit.js';
 import equalityExplorerTwoVariablesStrings from '../../equality-explorer-two-variables-strings.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 
-// string
+// strings
 const xString = equalityExplorerStrings.x;
 const yString = equalityExplorerTwoVariablesStrings.y;
 
-/**
- * @constructor
- */
-function TwoVariablesScene() {
+class TwoVariablesScene extends EqualityExplorerScene {
 
-  const variableOptions = {
-    range: EqualityExplorerConstants.VARIABLE_RANGE
-  };
-  const xVariable = new Variable( xString, variableOptions );
-  const yVariable = new Variable( yString, variableOptions );
+  constructor() {
 
-  EqualityExplorerScene.call( this,
-    createTermCreators( xVariable, yVariable ),
-    createTermCreators( xVariable, yVariable ), {
-      debugName: 'twoVariables',
-      variables: [ xVariable, yVariable ],
-      numberOfSnapshots: 4
-    } );
+    const variableOptions = {
+      range: EqualityExplorerConstants.VARIABLE_RANGE
+    };
+    const xVariable = new Variable( xString, variableOptions );
+    const yVariable = new Variable( yString, variableOptions );
+
+    super(
+      createTermCreators( xVariable, yVariable ),
+      createTermCreators( xVariable, yVariable ), {
+        debugName: 'twoVariables',
+        variables: [ xVariable, yVariable ],
+        numberOfSnapshots: 4
+      } );
+  }
 }
-
-equalityExplorerTwoVariables.register( 'TwoVariablesScene', TwoVariablesScene );
 
 /**
  * Creates the term creators for this scene.
@@ -66,5 +63,6 @@ function createTermCreators( xVariable, yVariable ) {
   ];
 }
 
-inherit( EqualityExplorerScene, TwoVariablesScene );
+equalityExplorerTwoVariables.register( 'TwoVariablesScene', TwoVariablesScene );
+
 export default TwoVariablesScene;
