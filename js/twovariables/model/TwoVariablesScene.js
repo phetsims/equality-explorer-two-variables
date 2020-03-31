@@ -12,8 +12,8 @@ import ConstantTermCreator from '../../../../equality-explorer/js/common/model/C
 import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
 import Variable from '../../../../equality-explorer/js/common/model/Variable.js';
 import VariableTermCreator from '../../../../equality-explorer/js/common/model/VariableTermCreator.js';
-import equalityExplorerStrings from '../../../../equality-explorer/js/equality-explorer-strings.js';
-import equalityExplorerTwoVariablesStrings from '../../equality-explorer-two-variables-strings.js';
+import equalityExplorerStrings from '../../../../equality-explorer/js/equalityExplorerStrings.js';
+import equalityExplorerTwoVariablesStrings from '../../equalityExplorerTwoVariablesStrings.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 
 // strings
