@@ -13,12 +13,8 @@ import EqualityExplorerScene from '../../../../equality-explorer/js/common/model
 import Variable from '../../../../equality-explorer/js/common/model/Variable.js';
 import VariableTermCreator from '../../../../equality-explorer/js/common/model/VariableTermCreator.js';
 import equalityExplorerStrings from '../../../../equality-explorer/js/equalityExplorerStrings.js';
-import equalityExplorerTwoVariablesStrings from '../../equalityExplorerTwoVariablesStrings.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
-
-// strings
-const xString = equalityExplorerStrings.x;
-const yString = equalityExplorerTwoVariablesStrings.y;
+import equalityExplorerTwoVariablesStrings from '../../equalityExplorerTwoVariablesStrings.js';
 
 class TwoVariablesScene extends EqualityExplorerScene {
 
@@ -27,8 +23,8 @@ class TwoVariablesScene extends EqualityExplorerScene {
     const variableOptions = {
       range: EqualityExplorerConstants.VARIABLE_RANGE
     };
-    const xVariable = new Variable( xString, variableOptions );
-    const yVariable = new Variable( yString, variableOptions );
+    const xVariable = new Variable( equalityExplorerStrings.x, variableOptions );
+    const yVariable = new Variable( equalityExplorerTwoVariablesStrings.y, variableOptions );
 
     super(
       createTermCreators( xVariable, yVariable ),

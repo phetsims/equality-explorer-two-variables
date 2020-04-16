@@ -12,11 +12,11 @@ import SimLauncher from '../../joist/js/SimLauncher.js';
 import equalityExplorerTwoVariablesStrings from './equalityExplorerTwoVariablesStrings.js';
 import TwoVariablesScreen from './twovariables/TwoVariablesScreen.js';
 
-const equalityExplorerTwoVariablesTitleString = equalityExplorerTwoVariablesStrings[ 'equality-explorer-two-variables' ].title;
-
 SimLauncher.launch( () => {
-  const sim = new Sim( equalityExplorerTwoVariablesTitleString, [ new TwoVariablesScreen() ], {
-    credits: EqualityExplorerConstants.CREDITS
-  } );
+  const sim = new Sim(
+    equalityExplorerTwoVariablesStrings[ 'equality-explorer-two-variables' ].title,
+    [ new TwoVariablesScreen() ], {
+      credits: EqualityExplorerConstants.CREDITS
+    } );
   sim.start();
 } );
