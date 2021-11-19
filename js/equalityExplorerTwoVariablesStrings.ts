@@ -3,11 +3,18 @@
 /**
  * Auto-generated from modulify, DO NOT manually modify.
  */
-
+/* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
 import equalityExplorerTwoVariables from './equalityExplorerTwoVariables.js';
 
-const equalityExplorerTwoVariablesStrings = getStringModule( 'EQUALITY_EXPLORER_TWO_VARIABLES' );
+type StringsType = {
+  'equality-explorer-two-variables': {
+    'title': string
+  },
+  'y': string
+};
+
+const equalityExplorerTwoVariablesStrings = getStringModule( 'EQUALITY_EXPLORER_TWO_VARIABLES' ) as StringsType;
 
 equalityExplorerTwoVariables.register( 'equalityExplorerTwoVariablesStrings', equalityExplorerTwoVariablesStrings );
 
