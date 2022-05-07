@@ -9,9 +9,9 @@ import equalityExplorerTwoVariables from './equalityExplorerTwoVariables.js';
 
 type StringsType = {
   'equality-explorer-two-variables': {
-    'title': string
-  },
-  'y': string
+    'title': string;
+  };
+  'y': string;
 };
 
 const equalityExplorerTwoVariablesStrings = getStringModule( 'EQUALITY_EXPLORER_TWO_VARIABLES' ) as StringsType;
