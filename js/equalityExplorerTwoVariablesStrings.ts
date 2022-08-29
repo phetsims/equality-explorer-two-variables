@@ -11,10 +11,10 @@ import equalityExplorerTwoVariables from './equalityExplorerTwoVariables.js';
 type StringsType = {
   'equality-explorer-two-variables': {
     'title': string;
-    'titleProperty': TReadOnlyProperty<string>;
+    'titleStringProperty': TReadOnlyProperty<string>;
   };
   'y': string;
-  'yProperty': TReadOnlyProperty<string>;
+  'yStringProperty': TReadOnlyProperty<string>;
 };
 
 const equalityExplorerTwoVariablesStrings = getStringModule( 'EQUALITY_EXPLORER_TWO_VARIABLES' ) as StringsType;
