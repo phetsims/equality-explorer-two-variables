@@ -14,7 +14,7 @@ import TwoVariablesScreen from './twovariables/TwoVariablesScreen.js';
 
 simLauncher.launch( () => {
   const sim = new Sim(
-    equalityExplorerTwoVariablesStrings[ 'equality-explorer-two-variables' ].title,
+    equalityExplorerTwoVariablesStrings[ 'equality-explorer-two-variables' ].titleStringProperty,
     [ new TwoVariablesScreen() ], {
       credits: EqualityExplorerConstants.CREDITS
     } );
