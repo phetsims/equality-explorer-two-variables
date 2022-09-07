@@ -17,8 +17,8 @@ type StringsType = {
   'yStringProperty': TReadOnlyProperty<string>;
 };
 
-const equalityExplorerTwoVariablesStrings = getStringModule( 'EQUALITY_EXPLORER_TWO_VARIABLES' ) as StringsType;
+const EqualityExplorerTwoVariablesStrings = getStringModule( 'EQUALITY_EXPLORER_TWO_VARIABLES' ) as StringsType;
 
-equalityExplorerTwoVariables.register( 'equalityExplorerTwoVariablesStrings', equalityExplorerTwoVariablesStrings );
+equalityExplorerTwoVariables.register( 'EqualityExplorerTwoVariablesStrings', EqualityExplorerTwoVariablesStrings );
 
-export default equalityExplorerTwoVariablesStrings;
+export default EqualityExplorerTwoVariablesStrings;

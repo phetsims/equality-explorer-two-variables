@@ -12,9 +12,9 @@ import ConstantTermCreator from '../../../../equality-explorer/js/common/model/C
 import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
 import Variable from '../../../../equality-explorer/js/common/model/Variable.js';
 import VariableTermCreator from '../../../../equality-explorer/js/common/model/VariableTermCreator.js';
-import equalityExplorerStrings from '../../../../equality-explorer/js/equalityExplorerStrings.js';
+import EqualityExplorerStrings from '../../../../equality-explorer/js/EqualityExplorerStrings.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
-import equalityExplorerTwoVariablesStrings from '../../equalityExplorerTwoVariablesStrings.js';
+import EqualityExplorerTwoVariablesStrings from '../../EqualityExplorerTwoVariablesStrings.js';
 
 class TwoVariablesScene extends EqualityExplorerScene {
 
@@ -23,8 +23,8 @@ class TwoVariablesScene extends EqualityExplorerScene {
     const variableOptions = {
       range: EqualityExplorerConstants.VARIABLE_RANGE
     };
-    const xVariable = new Variable( equalityExplorerStrings.x, variableOptions );
-    const yVariable = new Variable( equalityExplorerTwoVariablesStrings.y, variableOptions );
+    const xVariable = new Variable( EqualityExplorerStrings.x, variableOptions );
+    const yVariable = new Variable( EqualityExplorerTwoVariablesStrings.y, variableOptions );
 
     super(
       createTermCreators( xVariable, yVariable ),
