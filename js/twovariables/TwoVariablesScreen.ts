@@ -1,31 +1,32 @@
 // Copyright 2018-2020, University of Colorado Boulder
 
-// @ts-nocheck
-/**
+/**e
  * The 'Two Variables' screen.
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
 
 import Property from '../../../axon/js/Property.js';
-import EqualityExplorerScreen from '../../../equality-explorer/js/common/EqualityExplorerScreen.js';
-import merge from '../../../phet-core/js/merge.js';
+import EqualityExplorerScreen, { EqualityExplorerScreenOptions } from '../../../equality-explorer/js/common/EqualityExplorerScreen.js';
+import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
+import PickRequired from '../../../phet-core/js/types/PickRequired.js';
 import equalityExplorerTwoVariables from '../equalityExplorerTwoVariables.js';
 import TwoVariablesModel from './model/TwoVariablesModel.js';
 import TwoVariablesScreenView from './view/TwoVariablesScreenView.js';
 
-class TwoVariablesScreen extends EqualityExplorerScreen {
+type SelfOptions = EmptySelfOptions;
 
-  /**
-   * @param {Object} [options]
-   */
-  constructor( options ) {
+type TwoVariablesScreenOptions = SelfOptions & PickRequired<EqualityExplorerScreenOptions, 'tandem'>;
 
-    options = merge( {
+export default class TwoVariablesScreen extends EqualityExplorerScreen<TwoVariablesModel, TwoVariablesScreenView> {
 
-      // EqualityExplorerScreen options
+  public constructor( providedOptions: TwoVariablesScreenOptions ) {
+
+    const options = optionize<TwoVariablesScreenOptions, SelfOptions, EqualityExplorerScreenOptions>()( {
+
+      // EqualityExplorerScreenOptions
       backgroundColorProperty: new Property( 'rgb( 214, 233, 254 )' )
-    }, options );
+    }, providedOptions );
 
     super(
       () => new TwoVariablesModel(),
@@ -36,5 +37,3 @@ class TwoVariablesScreen extends EqualityExplorerScreen {
 }
 
 equalityExplorerTwoVariables.register( 'TwoVariablesScreen', TwoVariablesScreen );
-
-export default TwoVariablesScreen;
