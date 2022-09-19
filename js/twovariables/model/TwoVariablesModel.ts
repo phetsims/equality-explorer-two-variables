@@ -1,6 +1,5 @@
 // Copyright 2018-2020, University of Colorado Boulder
 
-// @ts-nocheck
 /**
  * Model for the 'Two Variables' screen.
  *
@@ -11,13 +10,11 @@ import EqualityExplorerModel from '../../../../equality-explorer/js/common/model
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import TwoVariablesScene from './TwoVariablesScene.js';
 
-class TwoVariablesModel extends EqualityExplorerModel {
+export default class TwoVariablesModel extends EqualityExplorerModel<TwoVariablesScene> {
 
-  constructor() {
+  public constructor() {
     super( [ new TwoVariablesScene() ] );
   }
 }
 
 equalityExplorerTwoVariables.register( 'TwoVariablesModel', TwoVariablesModel );
-
-export default TwoVariablesModel;
