@@ -16,7 +16,7 @@ import EqualityExplorerStrings from '../../../../equality-explorer/js/EqualityEx
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import EqualityExplorerTwoVariablesStrings from '../../EqualityExplorerTwoVariablesStrings.js';
 
-class TwoVariablesScene extends EqualityExplorerScene {
+export default class TwoVariablesScene extends EqualityExplorerScene {
 
   constructor() {
 
@@ -60,5 +60,3 @@ function createTermCreators( xVariable, yVariable ) {
 }
 
 equalityExplorerTwoVariables.register( 'TwoVariablesScene', TwoVariablesScene );
-
-export default TwoVariablesScene;

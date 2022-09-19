@@ -10,7 +10,7 @@ import EqualityExplorerScreenView from '../../../../equality-explorer/js/common/
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import TwoVariablesSceneNode from './TwoVariablesSceneNode.js';
 
-class TwoVariablesScreenView extends EqualityExplorerScreenView {
+export default class TwoVariablesScreenView extends EqualityExplorerScreenView {
 
   /**
    * @param {TwoVariablesModel} model
@@ -40,5 +40,3 @@ class TwoVariablesScreenView extends EqualityExplorerScreenView {
 }
 
 equalityExplorerTwoVariables.register( 'TwoVariablesScreenView', TwoVariablesScreenView );
-
-export default TwoVariablesScreenView;

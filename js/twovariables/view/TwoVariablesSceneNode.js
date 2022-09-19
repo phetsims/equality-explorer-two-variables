@@ -11,7 +11,7 @@ import VariablesSceneNode from '../../../../equality-explorer/js/variables/view/
 import merge from '../../../../phet-core/js/merge.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 
-class TwoVariablesSceneNode extends VariablesSceneNode {
+export default class TwoVariablesSceneNode extends VariablesSceneNode {
 
   /**
    * @param {TwoVariablesScene} scene
@@ -41,5 +41,3 @@ class TwoVariablesSceneNode extends VariablesSceneNode {
 }
 
 equalityExplorerTwoVariables.register( 'TwoVariablesSceneNode', TwoVariablesSceneNode );
-
-export default TwoVariablesSceneNode;
