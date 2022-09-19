@@ -30,7 +30,7 @@ export default class TwoVariablesScreen extends EqualityExplorerScreen<TwoVariab
 
     super(
       () => new TwoVariablesModel( options.tandem.createTandem( 'model' ) ),
-      model => new TwoVariablesScreenView( model ),
+      model => new TwoVariablesScreenView( model, options.tandem.createTandem( 'view' ) ),
       options
     );
   }

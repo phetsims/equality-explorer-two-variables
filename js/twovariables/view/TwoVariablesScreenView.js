@@ -14,9 +14,10 @@ class TwoVariablesScreenView extends EqualityExplorerScreenView {
 
   /**
    * @param {TwoVariablesModel} model
+   * @param {Tandem} tandem
    */
-  constructor( model ) {
-    super( model );
+  constructor( model, tandem ) {
+    super( model, tandem );
   }
 
   /**
