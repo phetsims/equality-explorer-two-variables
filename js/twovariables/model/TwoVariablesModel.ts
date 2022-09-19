@@ -7,13 +7,14 @@
  */
 
 import EqualityExplorerModel from '../../../../equality-explorer/js/common/model/EqualityExplorerModel.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import TwoVariablesScene from './TwoVariablesScene.js';
 
 export default class TwoVariablesModel extends EqualityExplorerModel<TwoVariablesScene> {
 
-  public constructor() {
-    super( [ new TwoVariablesScene() ] );
+  public constructor( tandem: Tandem ) {
+    super( [ new TwoVariablesScene() ], tandem );
   }
 }
 
