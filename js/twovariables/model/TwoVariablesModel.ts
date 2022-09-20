@@ -11,7 +11,7 @@ import Tandem from '../../../../tandem/js/Tandem.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import TwoVariablesScene from './TwoVariablesScene.js';
 
-export default class TwoVariablesModel extends EqualityExplorerModel<TwoVariablesScene> {
+export default class TwoVariablesModel extends EqualityExplorerModel {
 
   public constructor( tandem: Tandem ) {
     super( [ new TwoVariablesScene() ], tandem );
