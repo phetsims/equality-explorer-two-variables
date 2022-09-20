@@ -25,9 +25,8 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
       range: EqualityExplorerConstants.VARIABLE_RANGE
     };
 
-    //TODO https://github.com/phetsims/equality-explorer/issues/187 dynamic locale
-    const xVariable = new Variable( EqualityExplorerStrings.x, variableOptions );
-    const yVariable = new Variable( EqualityExplorerTwoVariablesStrings.y, variableOptions );
+    const xVariable = new Variable( EqualityExplorerStrings.xStringProperty, variableOptions );
+    const yVariable = new Variable( EqualityExplorerTwoVariablesStrings.yStringProperty, variableOptions );
 
     super(
       createTermCreators( xVariable, yVariable ),
