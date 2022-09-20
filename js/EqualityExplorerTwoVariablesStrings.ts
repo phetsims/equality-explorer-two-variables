@@ -10,10 +10,8 @@ import equalityExplorerTwoVariables from './equalityExplorerTwoVariables.js';
 
 type StringsType = {
   'equality-explorer-two-variables': {
-    'title': string;
     'titleStringProperty': TReadOnlyProperty<string>;
   };
-  'y': string;
   'yStringProperty': TReadOnlyProperty<string>;
 };
 
