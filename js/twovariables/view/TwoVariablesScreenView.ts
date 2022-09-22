@@ -14,7 +14,7 @@ import Tandem from '../../../../tandem/js/Tandem.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import TwoVariablesModel from '../model/TwoVariablesModel.js';
 import TwoVariablesSceneNode, { TwoVariablesSceneNodeOptions } from './TwoVariablesSceneNode.js';
-import { Node } from '../../../../scenery/js/imports.js';
+import EqualityExplorerSceneNode from '../../../../equality-explorer/js/common/view/EqualityExplorerSceneNode.js';
 
 export default class TwoVariablesScreenView extends EqualityExplorerScreenView {
 
@@ -30,7 +30,7 @@ export default class TwoVariablesScreenView extends EqualityExplorerScreenView {
                                    equationAccordionBoxExpandedProperty: Property<boolean>,
                                    snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                                    layoutBounds: Bounds2,
-                                   providedOptions?: TwoVariablesSceneNodeOptions ): Node {
+                                   providedOptions?: TwoVariablesSceneNodeOptions ): EqualityExplorerSceneNode {
     return new TwoVariablesSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
       snapshotsAccordionBoxExpandedProperty, layoutBounds, providedOptions );
   }
