@@ -5,14 +5,14 @@
  */
 /* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
-import TReadOnlyProperty from '../../axon/js/TReadOnlyProperty.js';
+import LinkableProperty from '../../axon/js/LinkableProperty.js';
 import equalityExplorerTwoVariables from './equalityExplorerTwoVariables.js';
 
 type StringsType = {
   'equality-explorer-two-variables': {
-    'titleStringProperty': TReadOnlyProperty<string>;
+    'titleStringProperty': LinkableProperty<string>;
   };
-  'yStringProperty': TReadOnlyProperty<string>;
+  'yStringProperty': LinkableProperty<string>;
 };
 
 const EqualityExplorerTwoVariablesStrings = getStringModule( 'EQUALITY_EXPLORER_TWO_VARIABLES' ) as StringsType;
