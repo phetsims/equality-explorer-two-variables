@@ -21,7 +21,6 @@ export type TwoVariablesSceneNodeOptions = SelfOptions & VariablesSceneNodeOptio
 export default class TwoVariablesSceneNode extends VariablesSceneNode {
 
   public constructor( scene: EqualityExplorerScene,
-                      sceneProperty: Property<EqualityExplorerScene>,
                       equationAccordionBoxExpandedProperty: Property<boolean>,
                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                       layoutBounds: Bounds2,
@@ -38,8 +37,7 @@ export default class TwoVariablesSceneNode extends VariablesSceneNode {
       }
     }, providedOptions );
 
-    super( scene, sceneProperty, equationAccordionBoxExpandedProperty,
-      snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
+    super( scene, equationAccordionBoxExpandedProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
   }
 }
 
