@@ -14,12 +14,13 @@ import TermCreator from '../../../../equality-explorer/js/common/model/TermCreat
 import Variable from '../../../../equality-explorer/js/common/model/Variable.js';
 import VariableTermCreator from '../../../../equality-explorer/js/common/model/VariableTermCreator.js';
 import EqualityExplorerStrings from '../../../../equality-explorer/js/EqualityExplorerStrings.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import EqualityExplorerTwoVariablesStrings from '../../EqualityExplorerTwoVariablesStrings.js';
 
 export default class TwoVariablesScene extends EqualityExplorerScene {
 
-  public constructor() {
+  public constructor( tandem: Tandem ) {
 
     const variableOptions = {
       range: EqualityExplorerConstants.VARIABLE_RANGE
@@ -31,9 +32,10 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
     super(
       createTermCreators( xVariable, yVariable ),
       createTermCreators( xVariable, yVariable ), {
-        tandemNamePrefix: 'twoVariables',
         variables: [ xVariable, yVariable ],
-        numberOfSnapshots: 4
+        numberOfSnapshots: 4,
+        tandemNamePrefix: 'twoVariables',
+        tandem: tandem
       } );
   }
 }
