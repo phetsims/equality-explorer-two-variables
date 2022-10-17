@@ -34,7 +34,6 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
       createTermCreators( xVariable, yVariable ), {
         variables: [ xVariable, yVariable ],
         numberOfSnapshots: 4,
-        tandemNamePrefix: 'twoVariables',
         tandem: tandem
       } );
   }
