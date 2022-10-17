@@ -24,7 +24,7 @@ export default class TwoVariablesSceneNode extends VariablesSceneNode {
                       equationAccordionBoxExpandedProperty: Property<boolean>,
                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                       layoutBounds: Bounds2,
-                      providedOptions?: TwoVariablesSceneNodeOptions ) {
+                      providedOptions: TwoVariablesSceneNodeOptions ) {
 
     const options = optionize<TwoVariablesSceneNodeOptions, SelfOptions, VariablesSceneNodeOptions>()( {
 

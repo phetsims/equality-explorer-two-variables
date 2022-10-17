@@ -28,7 +28,7 @@ export default class TwoVariablesScreenView extends EqualityExplorerScreenView {
                                       equationAccordionBoxExpandedProperty: Property<boolean>,
                                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                                       layoutBounds: Bounds2,
-                                      providedOptions?: TwoVariablesSceneNodeOptions ): TwoVariablesSceneNode {
+                                      providedOptions: TwoVariablesSceneNodeOptions ): TwoVariablesSceneNode {
     return new TwoVariablesSceneNode( scene, equationAccordionBoxExpandedProperty,
       snapshotsAccordionBoxExpandedProperty, layoutBounds, providedOptions );
   }
