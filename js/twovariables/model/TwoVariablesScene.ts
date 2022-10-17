@@ -29,33 +29,40 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
     const xVariable = new Variable( EqualityExplorerStrings.xStringProperty, variableOptions );
     const yVariable = new Variable( EqualityExplorerTwoVariablesStrings.yStringProperty, variableOptions );
 
-    super(
-      createTermCreators( xVariable, yVariable ),
-      createTermCreators( xVariable, yVariable ), {
-        variables: [ xVariable, yVariable ],
-        numberOfSnapshots: 4,
-        tandem: tandem
-      } );
+    const leftTermCreators = createTermCreators( xVariable, yVariable, tandem.createTandem( 'leftTermCreators' ) );
+    const rightTermCreators = createTermCreators( xVariable, yVariable, tandem.createTandem( 'rightTermCreators' ) );
+
+    super( leftTermCreators, rightTermCreators, {
+      variables: [ xVariable, yVariable ],
+      numberOfSnapshots: 4,
+      tandem: tandem
+    } );
   }
 }
 
 /**
  * Creates the term creators for this scene.
  */
-function createTermCreators( xVariable: Variable, yVariable: Variable ): TermCreator[] {
+function createTermCreators( xVariable: Variable, yVariable: Variable, parentTandem: Tandem ): TermCreator[] {
 
   return [
 
     // x & -x
-    new VariableTermCreator( xVariable ),
+    new VariableTermCreator( xVariable, {
+      tandem: parentTandem.createTandem( 'xVariableTermCreator' )
+    } ),
 
     // y & -y
     new VariableTermCreator( yVariable, {
       positiveFill: EqualityExplorerColors.POSITIVE_Y_FILL,
-      negativeFill: EqualityExplorerColors.NEGATIVE_Y_FILL
+      negativeFill: EqualityExplorerColors.NEGATIVE_Y_FILL,
+      tandem: parentTandem.createTandem( 'yVariableTermCreator' )
     } ),
 
-    new ConstantTermCreator()
+    // 1 & -1
+    new ConstantTermCreator( {
+      tandem: parentTandem.createTandem( 'constantTermCreator' )
+    } )
   ];
 }
 
