@@ -6,6 +6,7 @@
  * @author Chris Malley (PixelZoom, Inc.)
  */
 
+import Property from '../../../../axon/js/Property.js';
 import EqualityExplorerColors from '../../../../equality-explorer/js/common/EqualityExplorerColors.js';
 import EqualityExplorerConstants from '../../../../equality-explorer/js/common/EqualityExplorerConstants.js';
 import ConstantTermCreator from '../../../../equality-explorer/js/common/model/ConstantTermCreator.js';
@@ -29,10 +30,13 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
     const xVariable = new Variable( EqualityExplorerStrings.xStringProperty, variableOptions );
     const yVariable = new Variable( EqualityExplorerTwoVariablesStrings.yStringProperty, variableOptions );
 
-    const leftTermCreators = createTermCreators( xVariable, yVariable, tandem.createTandem( 'leftTermCreators' ) );
-    const rightTermCreators = createTermCreators( xVariable, yVariable, tandem.createTandem( 'rightTermCreators' ) );
+    const createLeftTermCreators = ( lockedProperty: Property<boolean> | null ) =>
+      createTermCreators( xVariable, yVariable, lockedProperty, tandem.createTandem( 'leftTermCreators' ) );
 
-    super( leftTermCreators, rightTermCreators, {
+    const createRightTermCreators = ( lockedProperty: Property<boolean> | null ) =>
+      createTermCreators( xVariable, yVariable, lockedProperty, tandem.createTandem( 'rightTermCreators' ) );
+
+    super( createLeftTermCreators, createRightTermCreators, {
       variables: [ xVariable, yVariable ],
       numberOfSnapshots: 4,
       tandem: tandem
@@ -43,17 +47,22 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
 /**
  * Creates the term creators for this scene.
  */
-function createTermCreators( xVariable: Variable, yVariable: Variable, parentTandem: Tandem ): TermCreator[] {
+function createTermCreators( xVariable: Variable,
+                             yVariable: Variable,
+                             lockedProperty: Property<boolean> | null,
+                             parentTandem: Tandem ): TermCreator[] {
 
   return [
 
     // x & -x
     new VariableTermCreator( xVariable, {
+      lockedProperty: lockedProperty,
       tandem: parentTandem.createTandem( 'xVariableTermCreator' )
     } ),
 
     // y & -y
     new VariableTermCreator( yVariable, {
+      lockedProperty: lockedProperty,
       positiveFill: EqualityExplorerColors.POSITIVE_Y_FILL,
       negativeFill: EqualityExplorerColors.NEGATIVE_Y_FILL,
       tandem: parentTandem.createTandem( 'yVariableTermCreator' )
@@ -61,6 +70,7 @@ function createTermCreators( xVariable: Variable, yVariable: Variable, parentTan
 
     // 1 & -1
     new ConstantTermCreator( {
+      lockedProperty: lockedProperty,
       tandem: parentTandem.createTandem( 'constantTermCreator' )
     } )
   ];
