@@ -35,11 +35,11 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
       tandem: variablesTandem.createTandem( 'yVariable' )
     } );
 
-    const createLeftTermCreators = ( lockedProperty: Property<boolean> | null ) =>
-      createTermCreators( xVariable, yVariable, lockedProperty, tandem.createTandem( 'leftTermCreators' ) );
+    const createLeftTermCreators = ( lockedProperty: Property<boolean> | null, tandem: Tandem ) =>
+      createTermCreators( xVariable, yVariable, lockedProperty, tandem );
 
-    const createRightTermCreators = ( lockedProperty: Property<boolean> | null ) =>
-      createTermCreators( xVariable, yVariable, lockedProperty, tandem.createTandem( 'rightTermCreators' ) );
+    const createRightTermCreators = ( lockedProperty: Property<boolean> | null, tandem: Tandem ) =>
+      createTermCreators( xVariable, yVariable, lockedProperty, tandem );
 
     super( createLeftTermCreators, createRightTermCreators, {
       variables: [ xVariable, yVariable ],
@@ -62,7 +62,7 @@ function createTermCreators( xVariable: Variable,
     // x & -x
     new VariableTermCreator( xVariable, {
       lockedProperty: lockedProperty,
-      tandem: parentTandem.createTandem( 'xVariableTermCreator' )
+      tandem: parentTandem.createTandem( 'xTermCreator' )
     } ),
 
     // y & -y
@@ -70,7 +70,7 @@ function createTermCreators( xVariable: Variable,
       lockedProperty: lockedProperty,
       positiveFill: EqualityExplorerColors.POSITIVE_Y_FILL,
       negativeFill: EqualityExplorerColors.NEGATIVE_Y_FILL,
-      tandem: parentTandem.createTandem( 'yVariableTermCreator' )
+      tandem: parentTandem.createTandem( 'yTermCreator' )
     } ),
 
     // 1 & -1
