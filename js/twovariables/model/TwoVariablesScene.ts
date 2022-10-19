@@ -23,12 +23,17 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
 
   public constructor( tandem: Tandem ) {
 
-    const variableOptions = {
-      range: EqualityExplorerConstants.VARIABLE_RANGE
-    };
+    const variablesTandem = tandem.createTandem( 'variables' );
 
-    const xVariable = new Variable( EqualityExplorerStrings.xStringProperty, variableOptions );
-    const yVariable = new Variable( EqualityExplorerTwoVariablesStrings.yStringProperty, variableOptions );
+    const xVariable = new Variable( EqualityExplorerStrings.xStringProperty, {
+      range: EqualityExplorerConstants.VARIABLE_RANGE,
+      tandem: variablesTandem.createTandem( 'xVariable' )
+    } );
+
+    const yVariable = new Variable( EqualityExplorerTwoVariablesStrings.yStringProperty, {
+      range: EqualityExplorerConstants.VARIABLE_RANGE,
+      tandem: variablesTandem.createTandem( 'yVariable' )
+    } );
 
     const createLeftTermCreators = ( lockedProperty: Property<boolean> | null ) =>
       createTermCreators( xVariable, yVariable, lockedProperty, tandem.createTandem( 'leftTermCreators' ) );
