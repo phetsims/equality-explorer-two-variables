@@ -12,6 +12,7 @@ import Dimension2 from '../../../../dot/js/Dimension2.js';
 import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
 import VariablesSceneNode, { VariablesSceneNodeOptions } from '../../../../equality-explorer/js/variables/view/VariablesSceneNode.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
+import OopsDialog from '../../../../scenery-phet/js/OopsDialog.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 
 type SelfOptions = EmptySelfOptions;
@@ -24,6 +25,7 @@ export default class TwoVariablesSceneNode extends VariablesSceneNode {
                       equationAccordionBoxExpandedProperty: Property<boolean>,
                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                       layoutBounds: Bounds2,
+                      numberTooBigDialog: OopsDialog,
                       providedOptions: TwoVariablesSceneNodeOptions ) {
 
     const options = optionize<TwoVariablesSceneNodeOptions, SelfOptions, VariablesSceneNodeOptions>()( {
@@ -37,7 +39,8 @@ export default class TwoVariablesSceneNode extends VariablesSceneNode {
       }
     }, providedOptions );
 
-    super( scene, equationAccordionBoxExpandedProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
+    super( scene, equationAccordionBoxExpandedProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds,
+      numberTooBigDialog, options );
   }
 }
 
