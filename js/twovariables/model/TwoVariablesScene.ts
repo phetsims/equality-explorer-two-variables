@@ -25,24 +25,24 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
 
     const variablesTandem = tandem.createTandem( 'variables' );
 
-    const xVariable = new Variable( EqualityExplorerStrings.xStringProperty, {
+    const x = new Variable( EqualityExplorerStrings.xStringProperty, {
       range: EqualityExplorerConstants.VARIABLE_RANGE,
-      tandem: variablesTandem.createTandem( 'xVariable' )
+      tandem: variablesTandem.createTandem( 'x' )
     } );
 
-    const yVariable = new Variable( EqualityExplorerTwoVariablesStrings.yStringProperty, {
+    const y = new Variable( EqualityExplorerTwoVariablesStrings.yStringProperty, {
       range: EqualityExplorerConstants.VARIABLE_RANGE,
-      tandem: variablesTandem.createTandem( 'yVariable' )
+      tandem: variablesTandem.createTandem( 'y' )
     } );
 
     const createLeftTermCreators = ( lockedProperty: Property<boolean> | null, tandem: Tandem ) =>
-      createTermCreators( xVariable, yVariable, lockedProperty, tandem );
+      createTermCreators( x, y, lockedProperty, tandem );
 
     const createRightTermCreators = ( lockedProperty: Property<boolean> | null, tandem: Tandem ) =>
-      createTermCreators( xVariable, yVariable, lockedProperty, tandem );
+      createTermCreators( x, y, lockedProperty, tandem );
 
     super( createLeftTermCreators, createRightTermCreators, {
-      variables: [ xVariable, yVariable ],
+      variables: [ x, y ],
       numberOfSnapshots: 4,
       tandem: tandem
     } );
@@ -52,21 +52,21 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
 /**
  * Creates the term creators for this scene.
  */
-function createTermCreators( xVariable: Variable,
-                             yVariable: Variable,
+function createTermCreators( x: Variable,
+                             y: Variable,
                              lockedProperty: Property<boolean> | null,
                              parentTandem: Tandem ): TermCreator[] {
 
   return [
 
     // x & -x
-    new VariableTermCreator( xVariable, {
+    new VariableTermCreator( x, {
       lockedProperty: lockedProperty,
       tandem: parentTandem.createTandem( 'xTermCreator' )
     } ),
 
     // y & -y
-    new VariableTermCreator( yVariable, {
+    new VariableTermCreator( y, {
       lockedProperty: lockedProperty,
       positiveFill: EqualityExplorerColors.POSITIVE_Y_FILL,
       negativeFill: EqualityExplorerColors.NEGATIVE_Y_FILL,
