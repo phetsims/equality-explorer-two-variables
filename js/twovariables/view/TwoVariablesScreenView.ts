@@ -10,7 +10,6 @@ import Property from '../../../../axon/js/Property.js';
 import Bounds2 from '../../../../dot/js/Bounds2.js';
 import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
 import EqualityExplorerScreenView from '../../../../equality-explorer/js/common/view/EqualityExplorerScreenView.js';
-import OopsDialog from '../../../../scenery-phet/js/OopsDialog.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import TwoVariablesModel from '../model/TwoVariablesModel.js';
@@ -29,10 +28,9 @@ export default class TwoVariablesScreenView extends EqualityExplorerScreenView {
                                       equationAccordionBoxExpandedProperty: Property<boolean>,
                                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                                       layoutBounds: Bounds2,
-                                      numberTooBigDialog: OopsDialog,
                                       providedOptions: TwoVariablesSceneNodeOptions ): TwoVariablesSceneNode {
     return new TwoVariablesSceneNode( scene, equationAccordionBoxExpandedProperty,
-      snapshotsAccordionBoxExpandedProperty, layoutBounds, numberTooBigDialog, providedOptions );
+      snapshotsAccordionBoxExpandedProperty, layoutBounds, providedOptions );
   }
 }
 
