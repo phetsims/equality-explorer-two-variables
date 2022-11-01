@@ -8,7 +8,6 @@
 
 import Property from '../../../../axon/js/Property.js';
 import EqualityExplorerColors from '../../../../equality-explorer/js/common/EqualityExplorerColors.js';
-import EqualityExplorerConstants from '../../../../equality-explorer/js/common/EqualityExplorerConstants.js';
 import ConstantTermCreator from '../../../../equality-explorer/js/common/model/ConstantTermCreator.js';
 import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
 import TermCreator from '../../../../equality-explorer/js/common/model/TermCreator.js';
@@ -26,12 +25,10 @@ export default class TwoVariablesScene extends EqualityExplorerScene {
     const variablesTandem = tandem.createTandem( 'variables' );
 
     const x = new Variable( EqualityExplorerStrings.xStringProperty, {
-      range: EqualityExplorerConstants.VARIABLE_RANGE,
       tandem: variablesTandem.createTandem( 'x' )
     } );
 
     const y = new Variable( EqualityExplorerTwoVariablesStrings.yStringProperty, {
-      range: EqualityExplorerConstants.VARIABLE_RANGE,
       tandem: variablesTandem.createTandem( 'y' )
     } );
 
