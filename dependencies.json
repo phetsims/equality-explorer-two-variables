@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-two-variables 1.0.20 Wed Feb 01 2023 11:04:26 GMT-0700 (Mountain Standard Time)",
+  "comment": "# equality-explorer-two-variables 1.0.21-rc.1 Thu Feb 02 2023 11:43:04 GMT-0700 (Mountain Standard Time)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "HEAD"
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-two-variables": {
-    "sha": "87db95517ac86127cb6f533f49154cb2a6d055ed",
+    "sha": "05434ac23def34566804fa6d36b84b03ccacbbac",
     "branch": "1.0"
   },
   "joist": {
