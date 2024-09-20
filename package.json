@@ -55,7 +55,7 @@
         },
         "parserOptions": {
           "project": [
-            "../equality-explorer-two-variables/tsconfig.json"
+            "../chipper/tsconfig/eslint-all/tsconfig.json"
           ]
         }
       }
