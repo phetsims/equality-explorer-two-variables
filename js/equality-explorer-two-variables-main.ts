@@ -1,4 +1,4 @@
-// Copyright 2018-2022, University of Colorado Boulder
+// Copyright 2018-2024, University of Colorado Boulder
 
 /**
  * Main entry point for the sim.
@@ -15,11 +15,13 @@ import TwoVariablesScreen from './twovariables/TwoVariablesScreen.js';
 
 simLauncher.launch( () => {
 
+  const titleStringProperty = EqualityExplorerTwoVariablesStrings[ 'equality-explorer-two-variables' ].titleStringProperty;
+
   const screens = [
     new TwoVariablesScreen( { tandem: Tandem.ROOT.createTandem( 'twoVariablesScreen' ) } )
   ];
 
-  const sim = new Sim( EqualityExplorerTwoVariablesStrings[ 'equality-explorer-two-variables' ].titleStringProperty, screens, {
+  const sim = new Sim( titleStringProperty, screens, {
     credits: EqualityExplorerConstants.CREDITS
   } );
 
