@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-two-variables 1.2.0-rc.1 Tue Nov 26 2024 10:45:13 GMT-0700 (Mountain Standard Time)",
+  "comment": "# equality-explorer-two-variables 1.2.0-rc.2 Tue Nov 26 2024 12:49:05 GMT-0700 (Mountain Standard Time)",
   "assert": {
     "sha": "386a2323ecc3b36fbe30babf13b660dc1cc522a8",
     "branch": "HEAD"
@@ -22,10 +22,10 @@
   },
   "equality-explorer": {
     "sha": "6f15675e67a7990822f1efe93fcfe04c59ec9a94",
-    "branch": "equality-explorer-two-variables-1.2"
+    "branch": "HEAD"
   },
   "equality-explorer-two-variables": {
-    "sha": "17a1c6bb7ab19cce0616857e2d58c1cf964e02aa",
+    "sha": "556bbbc00182db10a72e773f082e01a94cc01d00",
     "branch": "1.2"
   },
   "joist": {
