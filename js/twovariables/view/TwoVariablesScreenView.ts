@@ -11,7 +11,6 @@ import Bounds2 from '../../../../dot/js/Bounds2.js';
 import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
 import EqualityExplorerScreenView from '../../../../equality-explorer/js/common/view/EqualityExplorerScreenView.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import TwoVariablesModel from '../model/TwoVariablesModel.js';
 import TwoVariablesSceneNode, { TwoVariablesSceneNodeOptions } from './TwoVariablesSceneNode.js';
 
@@ -33,5 +32,3 @@ export default class TwoVariablesScreenView extends EqualityExplorerScreenView {
       snapshotsAccordionBoxExpandedProperty, layoutBounds, providedOptions );
   }
 }
-
-equalityExplorerTwoVariables.register( 'TwoVariablesScreenView', TwoVariablesScreenView );

@@ -12,7 +12,6 @@ import Dimension2 from '../../../../dot/js/Dimension2.js';
 import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
 import VariablesSceneNode, { VariablesSceneNodeOptions } from '../../../../equality-explorer/js/variables/view/VariablesSceneNode.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
-import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 
 type SelfOptions = EmptySelfOptions;
 
@@ -40,5 +39,3 @@ export default class TwoVariablesSceneNode extends VariablesSceneNode {
     super( scene, equationAccordionBoxExpandedProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
   }
 }
-
-equalityExplorerTwoVariables.register( 'TwoVariablesSceneNode', TwoVariablesSceneNode );

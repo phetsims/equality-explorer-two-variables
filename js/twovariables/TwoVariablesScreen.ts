@@ -10,7 +10,6 @@ import EqualityExplorerColors from '../../../equality-explorer/js/common/Equalit
 import EqualityExplorerScreen, { EqualityExplorerScreenOptions } from '../../../equality-explorer/js/common/EqualityExplorerScreen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
 import PickRequired from '../../../phet-core/js/types/PickRequired.js';
-import equalityExplorerTwoVariables from '../equalityExplorerTwoVariables.js';
 import TwoVariablesModel from './model/TwoVariablesModel.js';
 import TwoVariablesScreenView from './view/TwoVariablesScreenView.js';
 
@@ -35,5 +34,3 @@ export default class TwoVariablesScreen extends EqualityExplorerScreen<TwoVariab
     );
   }
 }
-
-equalityExplorerTwoVariables.register( 'TwoVariablesScreen', TwoVariablesScreen );

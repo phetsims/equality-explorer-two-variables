@@ -15,7 +15,6 @@ import Variable from '../../../../equality-explorer/js/common/model/Variable.js'
 import VariableTermCreator from '../../../../equality-explorer/js/common/model/VariableTermCreator.js';
 import EqualityExplorerStrings from '../../../../equality-explorer/js/EqualityExplorerStrings.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import equalityExplorerTwoVariables from '../../equalityExplorerTwoVariables.js';
 import EqualityExplorerTwoVariablesStrings from '../../EqualityExplorerTwoVariablesStrings.js';
 
 export default class TwoVariablesScene extends EqualityExplorerScene {
@@ -77,5 +76,3 @@ function createTermCreators( x: Variable,
     } )
   ];
 }
-
-equalityExplorerTwoVariables.register( 'TwoVariablesScene', TwoVariablesScene );
