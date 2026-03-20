@@ -20,4 +20,6 @@ type StringsType = {
 
 const EqualityExplorerTwoVariablesStrings = getStringModule( 'EQUALITY_EXPLORER_TWO_VARIABLES' ) as StringsType;
 
+equalityExplorerTwoVariables.register( 'EqualityExplorerTwoVariablesStrings', EqualityExplorerTwoVariablesStrings );
+
 export default EqualityExplorerTwoVariablesStrings;
